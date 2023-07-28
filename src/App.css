@@ -27,28 +27,52 @@ header a.logo{
 }
 
 
-header ul a{
+header ul a, header ul button{
   color: #000;
   transition: all .4s ease-in-out;
+  font-size: 14px;
 }
 
-header ul a:hover{
+header ul a:hover, header ul button:hover{
    color: orange;
 }
 
-
 header ul {
+  list-style: none; 
+
+}
+
+header ul.menus {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  position: relative;
+  padding: 10px;
 }
 
 .dropdown {
-   display: none; 
+  position: absolute;
+  top: 100%;
+  left: 30%; 
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+  background-color: #ddd;
+  padding: 10px;
+
 }
 
 .dropdown.show {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
+header ul button {
+   background: none;
+   outline: none;
+   border: none;
+   font-size: 14px;
+   cursor: pointer;
+}

@@ -42,5 +42,15 @@ export const menuItems:IMenuItems[] = [
     {
       title: 'About',
       url: '/about',
+      submenu: [
+        {
+          title: 'NodeJS',
+          url: 'node',
+        },
+        {
+          title: 'PHP',
+          url: 'php',
+        },
+      ],
     },
   ];

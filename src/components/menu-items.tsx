@@ -32,26 +32,19 @@ const MenuItems = (props:IMenuItemsProps) => {
        }, [dropdown]);
 
 
-       const onMouseEnter = () => {
-        window.innerWidth > 960 && setDropdown(true);
-       };
-       
-       const onMouseLeave = () => {
-        window.innerWidth > 960 && setDropdown(false);
-       };
+    
 
     return (
       <li className="menu-items" 
       ref={li}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
+     
       
       >
         {props.items.submenu ? (
           <>
             <button 
              type="button"
-             aria-expanded={ dropdown ? 'true' : 'false' }
+             
              onClick={() => setDropdown((prev) => !prev)}
              >
               {props.items.title}{' '}
